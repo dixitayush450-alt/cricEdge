@@ -1,25 +1,32 @@
 # 🏏 CricEDGE
 
-CricEDGE is a full-stack IPL Analytics and Match Prediction platform built using **React, TypeScript, Node.js, Express.js, and MongoDB**.
+<p align="center">
+  <b>AI-Powered IPL Analytics & Match Prediction Platform</b><br>
+  Built with React, TypeScript, Node.js, Express.js and MongoDB.
+</p>
 
-The application provides IPL team analytics, player statistics, venue insights, live weather integration, match prediction, prediction history, and secure user authentication through a modern responsive dashboard.
+---
+
+## 📖 Overview
+
+CricEDGE is a modern full-stack cricket analytics platform designed for IPL fans and data enthusiasts. It provides intelligent match predictions, team analytics, venue insights, weather integration, player statistics, and secure authentication through a clean, responsive dashboard.
 
 ---
 
 # ✨ Features
 
-- 🏏 IPL Match Prediction
-- 📊 Team Analytics Dashboard
+- 🏏 AI-Based Match Prediction
+- 📊 Team Performance Analytics
 - 🤝 Head-to-Head Comparison
-- 📈 Recent Team Form
+- 📈 Recent Team Form Analysis
 - 🌤️ Live Weather Integration
-- 🏟️ Venue Analysis
-- 👤 User Authentication (JWT)
+- 🏟️ Venue Insights
+- 👤 JWT Authentication
 - 🔐 Google OAuth Login
 - ❤️ Favourite Team Support
 - 📜 Prediction History
-- 📱 Fully Responsive UI
-- ⚡ Fast React + Vite Frontend
+- 📱 Fully Responsive Design
+- ⚡ Lightning Fast React + Vite Frontend
 
 ---
 
@@ -39,10 +46,10 @@ The application provides IPL team analytics, player statistics, venue insights, 
 
 - Node.js
 - Express.js
-- MongoDB
+- MongoDB Atlas
 - Mongoose
 - Passport.js
-- JSON Web Token (JWT)
+- JWT Authentication
 
 ---
 
@@ -56,20 +63,23 @@ cricEdge/
 │   ├── components/
 │   ├── services/
 │   ├── context/
-│   └── assets/
+│   ├── assets/
+│   └── styles/
 │
 ├── server/
+│   ├── config/
 │   ├── controllers/
+│   ├── middleware/
 │   ├── models/
 │   ├── routes/
-│   ├── middleware/
-│   ├── config/
+│   ├── scripts/
 │   └── utils/
 │
 ├── guidelines/
 ├── package.json
 ├── vite.config.ts
-└── README.md
+├── README.md
+└── .gitignore
 ```
 
 ---
@@ -78,21 +88,60 @@ cricEdge/
 
 Create a `.env` file inside the **server** folder.
 
+## Local Development
+
 ```env
+# ==========================
+# Server
+# ==========================
 PORT=5000
 
-MONGODB_URI=your_mongodb_connection_string
+# ==========================
+# Database
+# ==========================
+MONGODB_URI=your_mongodb_atlas_connection_string
 
-JWT_SECRET=your_jwt_secret
+# ==========================
+# Authentication
+# ==========================
+JWT_SECRET=your_secure_jwt_secret
 
+# ==========================
+# Frontend
+# ==========================
+FRONTEND_URL=http://localhost:5173
+CLIENT_URL=http://localhost:5173
+
+# ==========================
+# Google OAuth
+# ==========================
 GOOGLE_CLIENT_ID=your_google_client_id
-
 GOOGLE_CLIENT_SECRET=your_google_client_secret
-
 GOOGLE_CALLBACK_URL=http://localhost:5000/api/auth/google/callback
+
+# ==========================
+# Gmail SMTP
+# ==========================
+EMAIL_HOST=smtp.gmail.com
+EMAIL_PORT=587
+EMAIL_USER=your_email@gmail.com
+EMAIL_PASSWORD=your_gmail_app_password
+EMAIL_FROM=CricEDGE <your_email@gmail.com>
 ```
 
-> **Never upload your real `.env` file or secret keys to GitHub.**
+## Production
+
+```env
+FRONTEND_URL=https://your-frontend.vercel.app
+CLIENT_URL=https://your-frontend.vercel.app
+GOOGLE_CALLBACK_URL=https://your-backend.onrender.com/api/auth/google/callback
+```
+
+> ⚠️ **Security Notice**
+>
+> - Never upload your real `.env` file to GitHub.
+> - Never commit database credentials, API keys, passwords, or secret keys.
+> - Always keep `.env` inside `.gitignore`.
 
 ---
 
@@ -125,28 +174,30 @@ npm install
 
 ---
 
-# ▶️ Run Locally
+# ▶️ Running the Project
 
-Start Backend
+## Start Backend
 
 ```bash
 cd server
 npm run dev
 ```
 
-Start Frontend (Open another terminal)
+## Start Frontend
+
+Open another terminal
 
 ```bash
 npm run dev
 ```
 
-Frontend
+### Frontend
 
 ```
 http://localhost:5173
 ```
 
-Backend
+### Backend
 
 ```
 http://localhost:5000
@@ -154,24 +205,49 @@ http://localhost:5000
 
 ---
 
-# 🔒 Security
+# 🚀 Deployment
 
-- Environment variables are excluded using `.gitignore`
-- JWT Authentication
-- Google OAuth Authentication
-- Protected API Routes
-- Secrets are never committed to GitHub
+## Frontend
+
+- Vercel
+
+## Backend
+
+- Render
+
+## Database
+
+- MongoDB Atlas
 
 ---
 
-# 📌 Future Improvements
+# 🔒 Security
 
-- AI-powered Match Prediction
-- Live Match Score Integration
-- Player Performance Prediction
-- Admin Dashboard
-- Dark Mode
-- Email Notifications
+- JWT Authentication
+- Google OAuth Authentication
+- Protected API Routes
+- Passwords and secrets stored in environment variables
+- `.env` excluded using `.gitignore`
+- MongoDB Atlas secure connection
+
+---
+
+# 🚀 Future Roadmap
+
+- 🤖 Machine Learning Based Prediction Model
+- 📡 Live IPL Score Integration
+- 🏏 Player Performance Prediction
+- 📊 Advanced Team Analytics
+- 📈 Prediction Accuracy Dashboard
+- 🌙 Dark Mode
+- 📧 Email Notifications
+- 📱 Progressive Web App (PWA)
+
+---
+
+# 📄 License
+
+This project is licensed under the **MIT License**.
 
 ---
 
@@ -179,9 +255,12 @@ http://localhost:5000
 
 **Ayush Dixit**
 
-GitHub:
-https://github.com/dixitayush450-alt
+GitHub: https://github.com/dixitayush450-alt
 
 ---
 
-## ⭐ If you like this project, consider giving it a Star!
+## ⭐ Support
+
+If you found this project useful, please consider giving it a ⭐ on GitHub.
+
+Your support helps improve the project and motivates future development.
