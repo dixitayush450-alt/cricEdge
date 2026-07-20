@@ -147,8 +147,9 @@ router.get(
     "google",
     {
       session: false,
-      failureRedirect:
-        "http://localhost:5173/login?error=google_auth_failed",
+      failureRedirect: `${
+        process.env.FRONTEND_URL || "http://localhost:5173"
+      }/login?error=google_auth_failed`,
     }
   ),
   googleCallback
