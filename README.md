@@ -13,6 +13,18 @@ CricEDGE is a modern full-stack cricket analytics platform designed for IPL fans
 
 ---
 
+# 🌐 Live Demo
+
+### 🚀 Frontend
+
+https://cric-edge.vercel.app
+
+### ⚙️ Backend API
+
+https://cricedge.onrender.com
+
+---
+
 # ✨ Features
 
 - 🏏 AI-Based Match Prediction
@@ -79,6 +91,7 @@ cricEdge/
 ├── package.json
 ├── vite.config.ts
 ├── README.md
+├── vercel.json
 └── .gitignore
 ```
 
@@ -132,9 +145,9 @@ EMAIL_FROM=CricEDGE <your_email@gmail.com>
 ## Production
 
 ```env
-FRONTEND_URL=https://your-frontend.vercel.app
-CLIENT_URL=https://your-frontend.vercel.app
-GOOGLE_CALLBACK_URL=https://your-backend.onrender.com/api/auth/google/callback
+FRONTEND_URL=https://cric-edge.vercel.app
+CLIENT_URL=https://cric-edge.vercel.app
+GOOGLE_CALLBACK_URL=https://cricedge.onrender.com/api/auth/google/callback
 ```
 
 > ⚠️ **Security Notice**
@@ -210,14 +223,32 @@ http://localhost:5000
 ## Frontend
 
 - Vercel
+- https://cric-edge.vercel.app
 
 ## Backend
 
 - Render
+- https://cricedge.onrender.com
 
 ## Database
 
 - MongoDB Atlas
+
+---
+
+# 🔗 API Base URL
+
+## Production
+
+```
+https://cricedge.onrender.com/api
+```
+
+## Local Development
+
+```
+http://localhost:5000/api
+```
 
 ---
 
@@ -229,6 +260,23 @@ http://localhost:5000
 - Passwords and secrets stored in environment variables
 - `.env` excluded using `.gitignore`
 - MongoDB Atlas secure connection
+
+---
+
+# 📌 Project Status
+
+✅ Production Ready
+
+- ✅ Frontend deployed on Vercel
+- ✅ Backend deployed on Render
+- ✅ MongoDB Atlas connected
+- ✅ Google OAuth Authentication
+- ✅ JWT Authentication
+- ✅ Live Weather Integration
+- ✅ Match Prediction
+- ✅ Prediction History
+- ✅ Team Analytics
+- ✅ Responsive UI
 
 ---
 
@@ -255,7 +303,11 @@ This project is licensed under the **MIT License**.
 
 **Ayush Dixit**
 
-GitHub: https://github.com/dixitayush450-alt
+GitHub:
+https://github.com/dixitayush450-alt
+
+Repository:
+https://github.com/dixitayush450-alt/cricEdge
 
 ---
 
