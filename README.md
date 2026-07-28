@@ -250,7 +250,39 @@ http://localhost:5000/api
 
 # 📸 Application Screenshots
 
-> Screenshots will be added soon.
+## 🏠 Home
+
+![Home](screenshots/Home.png)
+
+---
+
+## 🏏 Match Prediction
+
+![Prediction](screenshots/Prediction.png)
+
+---
+
+## 📊 Analytics Dashboard
+
+![Analytics](screenshots/Analytics.png)
+
+---
+
+## 👥 Teams
+
+![Teams](screenshots/Teams.png)
+
+---
+
+## 👤 User Profile
+
+![Profile](screenshots/Profile.png)
+
+---
+
+## 📜 Prediction History
+
+![History](screenshots/History.png)
 
 ---
 
