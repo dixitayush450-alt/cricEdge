@@ -1,24 +1,15 @@
 # 🏏 CricEDGE
 
-![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-7-646CFF?logo=vite&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-24-339933?logo=node.js&logoColor=white)
-![Express.js](https://img.shields.io/badge/Express.js-Backend-000000?logo=express)
-![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?logo=mongodb&logoColor=white)
-![JWT](https://img.shields.io/badge/Auth-JWT-orange)
-![License](https://img.shields.io/badge/License-MIT-yellow)
-
 <p align="center">
-  <b>Data-Driven IPL Analytics & Match Prediction Platform</b><br>
+  <b>AI-Powered IPL Analytics & Match Prediction Platform</b><br>
   Built with React, TypeScript, Node.js, Express.js and MongoDB.
 </p>
 
 ---
 
-# 📖 Overview
+## 📖 Overview
 
-CricEDGE is a modern full-stack IPL analytics platform designed for cricket fans and data enthusiasts. It provides intelligent match predictions, team analytics, venue insights, live weather integration, player statistics, prediction history, and secure authentication through a clean, responsive dashboard.
+CricEDGE is a modern full-stack cricket analytics platform designed for IPL fans and data enthusiasts. It provides intelligent match predictions, team analytics, venue insights, weather integration, player statistics, and secure authentication through a clean, responsive dashboard.
 
 ---
 
@@ -36,7 +27,7 @@ https://cricedge.onrender.com
 
 # ✨ Features
 
-- 🏏 Data-Driven Match Prediction
+- 🏏 AI-Based Match Prediction
 - 📊 Team Performance Analytics
 - 🤝 Head-to-Head Comparison
 - 📈 Recent Team Form Analysis
@@ -46,9 +37,8 @@ https://cricedge.onrender.com
 - 🔐 Google OAuth Login
 - ❤️ Favourite Team Support
 - 📜 Prediction History
-- 👤 User Profile Management
 - 📱 Fully Responsive Design
-- ⚡ Fast React + Vite Frontend
+- ⚡ Lightning Fast React + Vite Frontend
 
 ---
 
@@ -75,7 +65,7 @@ https://cricedge.onrender.com
 
 ---
 
-# 📂 Project Structure
+# 📁 Project Structure
 
 ```text
 cricEdge/
@@ -83,11 +73,9 @@ cricEdge/
 ├── src/
 │   ├── app/
 │   ├── components/
-│   ├── context/
 │   ├── services/
+│   ├── context/
 │   ├── assets/
-│   ├── hooks/
-│   ├── utils/
 │   └── styles/
 │
 ├── server/
@@ -97,16 +85,14 @@ cricEdge/
 │   ├── models/
 │   ├── routes/
 │   ├── scripts/
-│   ├── services/
 │   └── utils/
 │
-├── public/
 ├── guidelines/
-├── README.md
-├── LICENSE
-├── vercel.json
+├── package.json
 ├── vite.config.ts
-└── package.json
+├── README.md
+├── vercel.json
+└── .gitignore
 ```
 
 ---
@@ -118,19 +104,37 @@ Create a `.env` file inside the **server** folder.
 ## Local Development
 
 ```env
+# ==========================
+# Server
+# ==========================
 PORT=5000
 
+# ==========================
+# Database
+# ==========================
 MONGODB_URI=your_mongodb_atlas_connection_string
 
+# ==========================
+# Authentication
+# ==========================
 JWT_SECRET=your_secure_jwt_secret
 
+# ==========================
+# Frontend
+# ==========================
 FRONTEND_URL=http://localhost:5173
 CLIENT_URL=http://localhost:5173
 
+# ==========================
+# Google OAuth
+# ==========================
 GOOGLE_CLIENT_ID=your_google_client_id
 GOOGLE_CLIENT_SECRET=your_google_client_secret
 GOOGLE_CALLBACK_URL=http://localhost:5000/api/auth/google/callback
 
+# ==========================
+# Gmail SMTP
+# ==========================
 EMAIL_HOST=smtp.gmail.com
 EMAIL_PORT=587
 EMAIL_USER=your_email@gmail.com
@@ -143,14 +147,13 @@ EMAIL_FROM=CricEDGE <your_email@gmail.com>
 ```env
 FRONTEND_URL=https://cric-edge.vercel.app
 CLIENT_URL=https://cric-edge.vercel.app
-
 GOOGLE_CALLBACK_URL=https://cricedge.onrender.com/api/auth/google/callback
 ```
 
 > ⚠️ **Security Notice**
 >
 > - Never upload your real `.env` file to GitHub.
-> - Never commit API keys, database credentials or secret keys.
+> - Never commit database credentials, API keys, passwords, or secret keys.
 > - Always keep `.env` inside `.gitignore`.
 
 ---
@@ -169,18 +172,19 @@ Move into the project
 cd cricEdge
 ```
 
-Install Frontend
+Install frontend dependencies
 
 ```bash
 npm install
 ```
 
-Install Backend
+Install backend dependencies
 
 ```bash
 cd server
 npm install
 ```
+
 ---
 
 # ▶️ Running the Project
@@ -218,13 +222,13 @@ http://localhost:5000
 
 ## Frontend
 
-- **Hosting:** Vercel
-- **URL:** https://cric-edge.vercel.app
+- Vercel
+- https://cric-edge.vercel.app
 
 ## Backend
 
-- **Hosting:** Render
-- **URL:** https://cricedge.onrender.com
+- Render
+- https://cricedge.onrender.com
 
 ## Database
 
@@ -247,42 +251,43 @@ http://localhost:5000/api
 ```
 
 ---
+---
 
 # 📸 Application Screenshots
 
 ## 🏠 Home
 
-![Home](screenshots/Home.png)
+![Home](./screenshots/home.png)
 
 ---
 
 ## 🏏 Match Prediction
 
-![Prediction](screenshots/Prediction.png)
+![Prediction](./screenshots/prediction.png)
 
 ---
 
 ## 📊 Analytics Dashboard
 
-![Analytics](screenshots/Analytics.png)
+![Analytics](./screenshots/analytics.png)
 
 ---
 
 ## 👥 Teams
 
-![Teams](screenshots/Teams.png)
+![Teams](./screenshots/teams.png)
 
 ---
 
 ## 👤 User Profile
 
-![Profile](screenshots/Profile.png)
+![Profile](./screenshots/profile.png)
 
 ---
 
 ## 📜 Prediction History
 
-![History](screenshots/History.png)
+![History](./screenshots/history.png)
 
 ---
 
@@ -291,29 +296,26 @@ http://localhost:5000/api
 - JWT Authentication
 - Google OAuth Authentication
 - Protected API Routes
-- Passwords securely stored using hashing
-- Environment Variables
-- MongoDB Atlas Secure Connection
+- Passwords and secrets stored in environment variables
 - `.env` excluded using `.gitignore`
+- MongoDB Atlas secure connection
 
 ---
 
 # 📌 Project Status
 
-## ✅ Production Ready
+✅ Production Ready
 
 - ✅ Frontend deployed on Vercel
 - ✅ Backend deployed on Render
-- ✅ MongoDB Atlas Connected
-- ✅ JWT Authentication
+- ✅ MongoDB Atlas connected
 - ✅ Google OAuth Authentication
+- ✅ JWT Authentication
 - ✅ Live Weather Integration
-- ✅ Team Analytics Dashboard
-- ✅ Head-to-Head Comparison
-- ✅ Venue Insights
+- ✅ Match Prediction
 - ✅ Prediction History
+- ✅ Team Analytics
 - ✅ Responsive UI
-- ✅ User Profile Management
 
 ---
 
@@ -325,9 +327,8 @@ http://localhost:5000/api
 - 📊 Advanced Team Analytics
 - 📈 Prediction Accuracy Dashboard
 - 🌙 Dark Mode
-- 📱 Progressive Web App (PWA)
 - 📧 Email Notifications
-- 📤 Export Prediction History (CSV / PDF)
+- 📱 Progressive Web App (PWA)
 
 ---
 
@@ -335,71 +336,22 @@ http://localhost:5000/api
 
 This project is licensed under the **MIT License**.
 
-See the **LICENSE** file for more details.
-
 ---
 
 # 👨‍💻 Author
 
-## Ayush Dixit
+**Ayush Dixit**
 
-**GitHub**
-
+GitHub:
 https://github.com/dixitayush450-alt
 
-**Repository**
-
+Repository:
 https://github.com/dixitayush450-alt/cricEdge
 
-**LinkedIn**
-
-https://www.linkedin.com/in/ayush-dixit-5b9b95367/
-
 ---
 
-# 📅 Changelog
+## ⭐ Support
 
-## v1.0.0 — Initial Stable Release
+If you found this project useful, please consider giving it a ⭐ on GitHub.
 
-### Added
-
-- Full-Stack React + Node.js Architecture
-- JWT Authentication
-- Google OAuth Login
-- IPL Match Prediction
-- Team Analytics
-- Head-to-Head Comparison
-- Venue Insights
-- Live Weather Integration
-- Prediction History
-- User Profile
-- Responsive UI
-- Vercel Deployment
-- Render Deployment
-- MongoDB Atlas Integration
-
----
-
-# 🤝 Contributing
-
-Contributions, feature suggestions, and improvements are always welcome.
-
-1. Fork the repository
-2. Create a new branch
-3. Commit your changes
-4. Push your branch
-5. Open a Pull Request
-
----
-
-# ⭐ Support
-
-If you found this project helpful, please consider giving it a ⭐ on GitHub.
-
-Your support motivates future development and improvements.
-
----
-
-<p align="center">
-  <b>Made with ❤️ by Ayush Dixit</b>
-</p>
+Your support helps improve the project and motivates future development.
