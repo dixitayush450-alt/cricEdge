@@ -321,7 +321,7 @@ https://github.com/dixitayush450-alt/cricEdge
 
 **LinkedIn**
 
-https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME
+https://www.linkedin.com/in/ayush-dixit-5b9b95367/
 
 ---
 
