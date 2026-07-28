@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { useAuth } from "../context/AuthContext";
 import { Outlet, NavLink, Link, useLocation } from "react-router";
 import { motion, AnimatePresence } from "motion/react";
 import {
@@ -12,6 +11,8 @@ import {
   User,
   History,
 } from "lucide-react";
+
+import { useAuth } from "../context/AuthContext";
 
 // ── Premium wordmark ────────────────────────────────────────────────────────
 function Logo({ size = "md" }: { size?: "sm" | "md" | "lg" }) {
@@ -46,6 +47,7 @@ function Logo({ size = "md" }: { size?: "sm" | "md" | "lg" }) {
             <stop offset="0%" stopColor="#3b82f6" />
             <stop offset="100%" stopColor="#06b6d4" />
           </linearGradient>
+
           <radialGradient id="ballG" cx="40%" cy="35%" r="60%">
             <stop offset="0%" stopColor="#c0392b" />
             <stop offset="55%" stopColor="#7b241c" />
@@ -58,6 +60,7 @@ function Logo({ size = "md" }: { size?: "sm" | "md" | "lg" }) {
           fill="url(#shieldGrad)"
           opacity="0.15"
         />
+
         <path
           d="M15 1 L28 6 L28 18 Q28 27 15 31 Q2 27 2 18 L2 6 Z"
           fill="none"
@@ -65,7 +68,9 @@ function Logo({ size = "md" }: { size?: "sm" | "md" | "lg" }) {
           strokeWidth="1.2"
           opacity="0.7"
         />
+
         <circle cx="15" cy="16" r="8.5" fill="url(#ballG)" />
+
         <ellipse
           cx="12.5"
           cy="13"
@@ -74,6 +79,7 @@ function Logo({ size = "md" }: { size?: "sm" | "md" | "lg" }) {
           fill="rgba(255,180,160,0.35)"
           style={{ filter: "blur(1.5px)" }}
         />
+
         <path
           d="M7.5 16 C9 12.5, 12 19.5, 15 16 C18 12.5, 21 19.5, 22.5 16"
           fill="none"
@@ -81,6 +87,7 @@ function Logo({ size = "md" }: { size?: "sm" | "md" | "lg" }) {
           strokeWidth="1.1"
           strokeLinecap="round"
         />
+
         <path
           d="M7.5 16 C9 19.5, 12 12.5, 15 16 C18 19.5, 21 12.5, 22.5 16"
           fill="none"
@@ -111,6 +118,7 @@ function Logo({ size = "md" }: { size?: "sm" | "md" | "lg" }) {
             <stop offset="100%" stopColor="#22d3ee" />
           </linearGradient>
         </defs>
+
         <text
           x="0"
           y="17"
@@ -123,6 +131,7 @@ function Logo({ size = "md" }: { size?: "sm" | "md" | "lg" }) {
         >
           cric
         </text>
+
         <text
           x="37"
           y="17"
@@ -162,9 +171,14 @@ export function Layout() {
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", onScroll, { passive: true });
 
-    return () => window.removeEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, {
+      passive: true,
+    });
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
   }, []);
 
   useEffect(() => {
@@ -239,7 +253,10 @@ export function Layout() {
                   to="/profile"
                   className="px-4 py-2 text-sm font-medium text-[#6b7db3] hover:text-white rounded-lg transition-colors"
                 >
-                  Hi, <span className="text-white">{user.name.split(" ")[0]}</span>
+                  Hi,{" "}
+                  <span className="text-white">
+                    {user.name.split(" ")[0]}
+                  </span>
                 </Link>
 
                 <button
@@ -259,6 +276,7 @@ export function Layout() {
                 >
                   Login
                 </Link>
+
                 <Link
                   to="/signup"
                   className="btn-primary px-4 py-2 text-sm font-semibold text-white rounded-xl"
@@ -344,6 +362,7 @@ export function Layout() {
                       >
                         Hi, {user.name.split(" ")[0]}
                       </Link>
+
                       <button
                         type="button"
                         onClick={handleLogout}
@@ -361,6 +380,7 @@ export function Layout() {
                     >
                       Login
                     </Link>
+
                     <Link
                       to="/signup"
                       className="flex-1 text-center btn-primary px-4 py-2.5 text-sm font-semibold text-white rounded-xl"
@@ -386,6 +406,7 @@ export function Layout() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-3">
               <Logo size="sm" />
+
               <span className="text-[#6b7db3] text-sm">
                 IPL Cricket Analytics
               </span>
@@ -398,15 +419,27 @@ export function Layout() {
               >
                 About
               </Link>
-              <a href="#" className="hover:text-white transition-colors">
+
+              <Link
+                to="/privacy"
+                className="hover:text-white transition-colors"
+              >
                 Privacy
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
+              </Link>
+
+              <Link
+                to="/terms"
+                className="hover:text-white transition-colors"
+              >
                 Terms
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
+              </Link>
+
+              <Link
+                to="/contact"
+                className="hover:text-white transition-colors"
+              >
                 Contact
-              </a>
+              </Link>
             </div>
 
             <div className="flex items-center gap-3">
@@ -423,7 +456,7 @@ export function Layout() {
           </div>
 
           <div className="mt-8 pt-6 border-t border-white/[0.04] text-center text-xs text-[#6b7db3]">
-            © 2025 cricEDGE. Data-driven cricket analytics for enthusiasts.
+            © 2026 cricEDGE. Data-driven cricket analytics for enthusiasts.
           </div>
         </div>
       </footer>
