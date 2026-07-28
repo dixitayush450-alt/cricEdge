@@ -253,6 +253,8 @@ http://localhost:5000/api
 ---
 ---
 
+---
+
 # 📸 Application Screenshots
 
 ## 🏠 Home
